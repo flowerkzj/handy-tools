@@ -8,6 +8,6 @@ if len(sys.argv) > 1:
     if not os.path.exists(sys.argv[1]):
         sys.stderr.write('Error: file %s not found\n' % sys.argv[1])
         exit(1)
-    print json.dumps(json.load(open(sys.argv[1])), indent=4, separators=(",", ": "), ensure_ascii=False)
+    print json.dumps(json.load(open(sys.argv[1])), indent=4, separators=(",", ": "), ensure_ascii=False, sort_keys=True)
 else:
-    print json.dumps(json.load(sys.stdin), indent=4, separators=(",", ": "), ensure_ascii=False)
+    print json.dumps(json.load(sys.stdin), indent=4, separators=(",", ": "), ensure_ascii=False, sort_keys=True)
