@@ -6,6 +6,7 @@ BEGIN {
         exit;
     }
     FS = "\t";
+    srand(systime())
 }
 
 {
